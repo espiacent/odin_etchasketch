@@ -13,4 +13,5 @@ body {
 
 .gridfield {
     border: solid 0.1px black;
+    background-color: yellow;
 }
