@@ -1,0 +1,16 @@
+@import "normalise.css";
+
+body {
+    margin: 20%;
+}
+.paintboard {
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+    aspect-ratio: 1;
+    border: solid 0.1px black;
+}
+
+.gridfield {
+    border: solid 0.1px black;
+}
