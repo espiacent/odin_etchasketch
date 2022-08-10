@@ -1,9 +1,9 @@
 @import "normalise.css";
 
 body {
-    margin: 20%;
+    margin: 2% 25% 2% 25%;
 }
-.paintboard {
+.canvas {
     display: grid;
     grid-template-columns: repeat(16, 1fr);
     grid-template-rows: repeat(16, 1fr);
@@ -13,5 +13,22 @@ body {
 
 .gridfield {
     border: solid 0.1px black;
-    background-color: yellow;
+    background-color: rgb(223, 223, 223);
+}
+
+.divider {
+    margin-top: 10px;
+}
+
+button {
+    margin-right: 10px;
+}
+
+button:last-child {
+margin-right: 0px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
 }
