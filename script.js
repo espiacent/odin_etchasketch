@@ -24,19 +24,27 @@ canvas.addEventListener('click', e => {
     document.getElementById(`${gridId}`).style.backgroundColor = "black";
 }, { passive: true })
 
-// const btn1 = document.querySelector('.size');
-// const btn2 = document.querySelector('.canvascolor');
-// const btn3 = document.querySelector('.pencolor');
-const btn4 = document.querySelector('.clear');
+const dropdown1 = document.querySelector('.size');
+const dropdown2 = document.querySelector('.canvascolour');
+const dropdown3 = document.querySelector('.pencolour');
+const button1 = document.querySelector('.clear');
 
-// btn1.addEventListener('click', rock);
-// btn2.addEventListener('click', paper);
-// btn3.addEventListener('click', scissors);
-btn4.addEventListener('click', clearCanvas);
+dropdown1.addEventListener('change', (event) => {
+    console.log(`${event.target.value}`);
+});
 
-function clearCanvas() {
+dropdown2.addEventListener('change', (event) => {
+    console.log(`${event.target.value}`);
+});
+
+dropdown3.addEventListener('change', (event) => {
+    console.log(`${event.target.value}`);
+});
+
+button1.addEventListener('click', (event) => {
     const canvas = document.querySelectorAll('.gridfield')
     canvas.forEach(field => {
         field.style.backgroundColor = "rgb(223, 223, 223)";
     });
-}
+});
+

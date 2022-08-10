@@ -17,11 +17,30 @@
 <body>
     <div class="canvas"></div>
     <div class="divider"></div>
-    <div class="buttons">
-        <button class="size">CANVAS SIZE</button>
-        <button class="canvascolor">CANVAS COLOUR</button>
-        <button class="pencolor">PEN COLOUR</button>
+    <div class="choices">
+        <select name="size" class="size">
+            <option value="" disabled selected>CANVAS SIZE</option>
+            <option value="16x16">16x16</option>
+            <option value="32x32">32x32</option>
+            <option value="64x64">64x64</option>
+        </select>
+        <select name="canvascolour" class="canvascolour">
+            <option value="" disabled selected>CANVAS COLOUR</option>
+            <option value="grey">grey</option>
+            <option value="black">black</option>
+            <option value="yellow">yellow</option>
+        </select>
+        <select name="pencolour" class="pencolour">
+            <option value="" disabled selected>PEN COLOUR</option>
+            <option value="black">black</option>
+            <option value="white">white</option>
+            <option value="white">grey</option>
+            <option value="blue">blue</option>
+            <option value="green">green</option>
+            <option value="red">red</option>
+        </select>
         <button class="clear">CLEAR CANVAS</button>
+
     </div>
 </body>
 

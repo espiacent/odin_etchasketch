@@ -20,15 +20,8 @@ body {
     margin-top: 10px;
 }
 
-button {
-    margin-right: 10px;
-}
-
-button:last-child {
-margin-right: 0px;
-}
-
-.buttons {
+.choices {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
 }
