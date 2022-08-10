@@ -15,29 +15,36 @@
 </head>
 
 <body>
+    <h1>Etch-a-Sketch</h1>
     <div class="canvas"></div>
     <div class="divider"></div>
     <div class="choices">
         <select name="size" class="size">
             <option value="" disabled selected>CANVAS SIZE</option>
-            <option value="10">10x10</option>
+            <option value="8">8x8</option>
+            <option value="12">12x12</option>
             <option value="16">16x16</option>
             <option value="20">20x20</option>
-            <option value="32">32x32</option>
+            <option value="24">24x24</option>
         </select>
         <select name="canvascolour" class="canvascolour">
             <option value="" disabled selected>CANVAS COLOUR</option>
             <option value="rgb(223, 223, 223)">grey</option>
             <option value="black">black</option>
+            <option value="white">white</option>
             <option value="yellow">yellow</option>
+            <option value="blue">blue</option>
+            <option value="green">green</option>
+            <option value="red">red</option>
         </select>
         <select name="pencolour" class="pencolour">
             <option value="" disabled selected>PEN COLOUR</option>
             <option value="black">black</option>
             <option value="white">white</option>
-            <option value="white">grey</option>
+            <option value="rgb(223, 223, 223)">grey</option>
             <option value="blue">blue</option>
             <option value="green">green</option>
+            <option value="yellow">yellow</option>
             <option value="red">red</option>
         </select>
         <button class="clear">CLEAR CANVAS</button>
