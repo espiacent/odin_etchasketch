@@ -28,9 +28,15 @@ canvas.addEventListener('mouseover', e => {
 
 // paint by clicking
 canvas.addEventListener('click', e => {
+    const randomise = Math.floor(Math.random() * 16777215).toString(16);
+    randomColour = "#" + randomise;
     const position = (document.elementFromPoint(e.clientX, e.clientY));
     const gridId = position.id;
-    document.getElementById(`${gridId}`).style.backgroundColor = `${window.penColour}`;
+    if (window.rainbow) {
+        document.getElementById(`${gridId}`).style.backgroundColor = `${randomColour}`;
+    } else {
+        document.getElementById(`${gridId}`).style.backgroundColor = `${window.penColour}`;
+    }
 }, { passive: true })
 
 // dropdowns for choices and clear button
