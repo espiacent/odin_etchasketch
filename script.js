@@ -58,8 +58,10 @@ dropdown3.addEventListener('change', (event) => {
 });
 
 button1.addEventListener('click', (event) => {
-    const canvas = document.querySelectorAll('.gridfield');
-    canvas.forEach(field => {
+    const resetdropdown2 = document.querySelector('.canvascolour');
+    resetdropdown2.selectedIndex = 0;
+    const canvasAll = document.querySelectorAll('.gridfield');
+    canvasAll.forEach(field => {
         field.style.backgroundColor = "rgb(223, 223, 223)";
     });
 });
