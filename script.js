@@ -14,9 +14,15 @@ window.onmouseup = () => (mouseDown = false);
 
 canvas.addEventListener('mouseover', e => {
     if (mouseDown) {
+        const randomise = Math.floor(Math.random() * 16777215).toString(16);
+        randomColour = "#" + randomise;
         const position = (document.elementFromPoint(e.clientX, e.clientY));
         const gridId = position.id;
-        document.getElementById(`${gridId}`).style.backgroundColor = `${window.penColour}`;
+        if (window.rainbow) {
+            document.getElementById(`${gridId}`).style.backgroundColor = `${randomColour}`;
+        } else {
+            document.getElementById(`${gridId}`).style.backgroundColor = `${window.penColour}`;
+        }
     }
 }, { passive: true })
 
@@ -37,8 +43,6 @@ const button1 = document.querySelector('.clear');
 dropdown1.addEventListener('change', (event) => {
     const resetdropdown2 = document.querySelector('.canvascolour');
     resetdropdown2.selectedIndex = 0;
-    const resetdropdown3 = document.querySelector('.pencolour');
-    resetdropdown3.selectedIndex = 0;
     const canvas = document.querySelector('.canvas');
     const mult = event.target.value * event.target.value;
     canvas.style.gridTemplateColumns = `repeat(${event.target.value}, 1fr)`;
@@ -65,11 +69,17 @@ dropdown2.addEventListener('change', (event) => {
 
 // change pen colour
 dropdown3.addEventListener('change', (event) => {
-    window.penColour = `${event.target.value}`;
+    if (dropdown3.selectedIndex == 8) {
+        window.rainbow = true;
+    } else {
+        window.rainbow = false;
+        window.penColour = `${event.target.value}`;
+    }
 });
 
 // clear grid and reset dropdowns and choices (not grid size)
 button1.addEventListener('click', (event) => {
+    window.rainbow = false;
     window.penColour = 'black';
     const resetdropdown2 = document.querySelector('.canvascolour');
     resetdropdown2.selectedIndex = 0;

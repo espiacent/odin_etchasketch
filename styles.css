@@ -1,7 +1,7 @@
 @import "normalise.css";
 
 body {
-    margin: 2% 25% 2% 25%;
+    margin: 0 32% 1% 32%;
 }
 .canvas {
     display: grid;
@@ -28,4 +28,5 @@ body {
 
 h1 {
     text-align: center;
+    margin: 12px;
 }
