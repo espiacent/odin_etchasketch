@@ -59,7 +59,7 @@ dropdown1.addEventListener('change', (event) => {
     };
 });
 
-// change grid colour
+//change grid colour
 dropdown2.addEventListener('change', (event) => {
     const canvas = document.querySelectorAll('.gridfield');
     canvas.forEach(field => {

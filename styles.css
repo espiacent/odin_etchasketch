@@ -1,5 +1,11 @@
 @import "normalise.css";
 
+:root {
+    --CanvasSize: repeat(16, 1fr);
+    --CanvasColour: #dfdfdf;
+    --PenColour: #000000;
+}
+
 body {
     margin: 0 32% 1% 32%;
 }
@@ -9,11 +15,11 @@ body {
     grid-template-rows: repeat(16, 1fr);
     aspect-ratio: 1;
     border: solid 0.1px black;
+    background-color: var(--CanvasColour);
 }
 
 .gridfield {
     border: solid 0.1px black;
-    background-color: rgb(223, 223, 223);
 }
 
 .divider {
