@@ -20,6 +20,8 @@ canvas.addEventListener('mouseover', e => {
         const gridId = position.id;
         if (window.rainbow) {
             document.getElementById(`${gridId}`).style.backgroundColor = `${randomColour}`;
+            // const headline = document.querySelector('h1');
+            // headline.style.color = `${randomColour}`;
         } else {
             document.getElementById(`${gridId}`).style.backgroundColor = `${window.penColour}`;
         }
@@ -34,6 +36,9 @@ canvas.addEventListener('click', e => {
     const gridId = position.id;
     if (window.rainbow) {
         document.getElementById(`${gridId}`).style.backgroundColor = `${randomColour}`;
+        const headline = document.querySelector('h1');
+        headline.style.color = `${randomColour}`;
+
     } else {
         document.getElementById(`${gridId}`).style.backgroundColor = `${window.penColour}`;
     }
@@ -93,6 +98,8 @@ button1.addEventListener('click', (event) => {
     resetdropdown2.selectedIndex = 0;
     const resetdropdown3 = document.querySelector('.pencolour');
     resetdropdown3.selectedIndex = 0;
+    const headline = document.querySelector('h1');
+    headline.style.color = 'black';
     const canvasAll = document.querySelectorAll('.gridfield');
     canvasAll.forEach(field => {
         field.style.backgroundColor = "rgb(223, 223, 223)";
