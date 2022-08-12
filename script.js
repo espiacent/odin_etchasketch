@@ -80,6 +80,8 @@ dropdown3.addEventListener('change', (event) => {
     } else {
         window.rainbow = false;
         window.penColour = `${event.target.value}`;
+        const headline = document.querySelector('h1');
+        headline.style.color = `${event.target.value}`;
     }
 });
 

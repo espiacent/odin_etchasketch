@@ -29,4 +29,5 @@ body {
 h1 {
     text-align: center;
     margin: 12px;
+    text-shadow: 0.5px 0.5px black;
 }
